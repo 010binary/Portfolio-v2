@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+---
+# Portfolio Project
 
-First, run the development server:
+Welcome to my portfolio project! This project showcases my skills, projects, and experiences. Whether you're a potential employer, collaborator, or just curious, feel free to explore and learn more about me.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Description](#description)
+- [Features](#usage)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contact](#contact)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Description
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This portfolio project serves as an interactive and informative space to present my work, skills, and background. It's designed to provide a comprehensive overview of who I am as a professional, showcasing my projects, achievements, and areas of expertise.
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- **Home Section:** A brief introduction and welcome message.
+- **Projects:** Display of key projects with descriptions, technologies used, and links.
+- **Skills:** Showcase of technical and soft skills.
+- **Resume:** Link to or embed my resume for further details.
+- **Contact:** Information on how to reach out to me.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- NextJS: Frontend framework for building a responsive and dynamic user interface.
+- SCSS: CSS preprocessor for Styling
+- Figma: Design tool
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Explore the different sections of the portfolio to learn more about me, my skills, and the projects I've worked on. Feel free to reach out through the provided in the portfolio or on through contact information below.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact
+
+- Email: [Augustine32fg@gmail.com](https://mailto:augustine32fg@gmail.com)
+---
+- LinkedIn: [Augustine](https://www.linkedin.com/in/alpha-augustine)
+---
+- Twitter: [@Augustine](https://twitter.com/August13200296)
+---
+
+Thank you for visiting my portfolio!
+---
