@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Menu,
   X,
@@ -13,17 +14,16 @@ import {
   Twitter,
   Linkedin,
   Github,
-  Dribbble,
   PencilLine,
 } from "lucide-react";
 import { navimage } from "../../../public/index.js";
 import Image from "next/image.js";
+import Loader from "./Loader.jsx";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const pathname = usePathname();
   const toggleMenu = () => setIsOpen(!isOpen);
-
   const navItems = [
     { icon: Home, label: "Home", href: "/" },
     { icon: CircleUserRound, label: "About", href: "/about" },
@@ -38,12 +38,15 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       <nav className="md:hidden bg-black text-white sticky top-0 z-50 p-6">
         <div className="flex justify-between items-center">
-          <div>
+          <div className="flex items-center">
             <Image
               src={navimage}
               alt="Profile"
               className="w-12 h-12 rounded-md"
             />
+            <div className="bg-[#0d5939] ml-3 text-[#4ce6a6] font-semibold text-sm text-center py-2 px-2 rounded-sm inline-block">
+              <Loader />
+            </div>
           </div>
           <button onClick={toggleMenu} className="p-2">
             {isOpen ? (
@@ -66,7 +69,8 @@ const Navbar = () => {
                         : item.label === "My Resume"
                         ? "border border-gray-600 rounded-md font-light duration-500 hover:text-[#4ce6a6] hover:bg-slate-400/50"
                         : "hover:bg-gray-800 hover:text-[#4ce6a6] hover:fill-[#4ce6a6] font-light text-gray-300 duration-500 rounded"
-                    }`}
+                    }
+                    ${pathname === `${item.href}` ? "bg-slate-400/50" : ""}`}
                   >
                     <item.icon size={15} />
                     <span>{item.label}</span>
@@ -99,10 +103,10 @@ const Navbar = () => {
             <Image
               src={navimage}
               alt="Profile"
-              className="rounded-sm h-44 mb-3 border border-r-white"
+              className="rounded-sm h-48 mb-3 "
             />
             <div className="bg-green-600/30 text-[#4ce6a6] text-sm text-center w-full py-1 px-2 rounded-md inline-block">
-              Available for Work
+              <Loader />
             </div>
           </div>
           <ul className="space-y-4 flex-grow">
@@ -116,7 +120,8 @@ const Navbar = () => {
                       : item.label === "My Resume"
                       ? "border border-gray-600 rounded-md hover:scale-105 duration-500 hover:text-[#4ce6a6] hover:bg-slate-400/50"
                       : "hover:bg-gray-800 hover:text-[#4ce6a6] hover:fill-[#4ce6a6] hover:scale-105 duration-500 rounded"
-                  }`}
+                  } 
+                  ${pathname === `${item.href}` ? "bg-slate-400/50" : ""}`}
                 >
                   <item.icon size={20} className="" />
                   <span>{item.label}</span>
