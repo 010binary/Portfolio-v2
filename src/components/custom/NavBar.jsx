@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -24,13 +24,30 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const toggleMenu = () => setIsOpen(!isOpen);
+  const menuRef = useRef(null);
+
+  const handleCloseMenu = () => setIsOpen(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const navItems = [
     { icon: Home, label: "Home", href: "/" },
     { icon: CircleUserRound, label: "About", href: "/about" },
-    { icon: ImageIcon, label: "Project", href: "/Project" },
+    { icon: ImageIcon, label: "Project", href: "/project" },
     { icon: Briefcase, label: "Tools & Stack", href: "/toolbox" },
-    { icon: Mail, label: "Contact Me", href: "/contact", highlight: true },
-    { icon: FileText, label: "My Resume", href: "/resume" },
+    { icon: Mail, label: "Contact Me", href: "#", highlight: true }, // dropdown
+    { icon: FileText, label: "My Resume", href: "#" }, //route to resume
   ];
 
   return (
@@ -44,7 +61,7 @@ const Navbar = () => {
               alt="Profile"
               className="w-12 h-12 rounded-md"
             />
-            <div className="bg-[#0d5939] ml-3 text-[#4ce6a6] font-semibold text-sm text-center py-2 px-2 rounded-sm inline-block">
+            <div className="bg-[#0d593953] ml-3 text-[#4ce6a6] font-semibold text-sm text-center py-2 px-2 rounded-sm inline-block">
               <Loader />
             </div>
           </div>
@@ -57,42 +74,49 @@ const Navbar = () => {
           </button>
         </div>
         {isOpen && (
-          <div className="py-4 ">
-            <ul className="space-y-2">
-              {navItems.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    href={item.href}
-                    className={`flex items-center text-sm space-x-4 py-3 px-4 ${
-                      item.highlight
-                        ? "bg-[#4ce6a6] text-black font-semibold rounded-md duration-500 hover:bg-slate-400/50"
-                        : item.label === "My Resume"
-                        ? "border border-gray-600 rounded-md font-light duration-500 hover:text-[#4ce6a6] hover:bg-slate-400/50"
-                        : "hover:bg-gray-800 hover:text-[#4ce6a6] hover:fill-[#4ce6a6] font-light text-gray-300 duration-500 rounded"
-                    }
-                    ${pathname === `${item.href}` ? "bg-slate-400/50" : ""}`}
-                  >
-                    <item.icon size={15} />
-                    <span>{item.label}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-4 flex justify-between space-x-4 px-4">
-              <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
-                <Twitter size={15} />
-              </span>
-              <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
-                <Linkedin size={15} />
-              </span>
-              <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
-                <Github size={15} />
-              </span>
-              <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
-                <PencilLine size={15} />
-              </span>
+          <>
+            {/* Added overlay for closing the menu */}
+            <div
+              ref={menuRef}
+              className="fixed top-[96px] left-0 right-0 z-50 bg-black p-6"
+            >
+              <ul className="space-y-2">
+                {navItems.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      className={`flex items-center text-sm space-x-4 py-3 px-4 ${
+                        item.highlight
+                          ? "bg-[#4ce6a6] text-black font-semibold rounded-md duration-500 hover:bg-slate-400/50"
+                          : item.label === "My Resume"
+                          ? "border border-gray-600 rounded-md font-light duration-500 hover:text-[#4ce6a6] hover:bg-slate-400/50"
+                          : "hover:bg-gray-800 hover:text-[#4ce6a6] hover:fill-[#4ce6a6] font-light text-gray-300 duration-500 rounded"
+                      }
+                      ${pathname === `${item.href}` ? "bg-slate-400/50" : ""}`}
+                      onClick={handleCloseMenu} // Close menu on item click
+                    >
+                      <item.icon size={15} />
+                      <span>{item.label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-4 flex justify-between space-x-4 px-4">
+                <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+                  <Twitter size={15} />
+                </span>
+                <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+                  <Linkedin size={15} />
+                </span>
+                <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+                  <Github size={15} />
+                </span>
+                <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+                  <PencilLine size={15} />
+                </span>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </nav>
 
@@ -105,7 +129,7 @@ const Navbar = () => {
               alt="Profile"
               className="rounded-sm h-48 mb-3 "
             />
-            <div className="bg-green-600/30 text-[#4ce6a6] text-sm text-center w-full py-1 px-2 rounded-md inline-block">
+            <div className="bg-[#0d593953] text-[#4ce6a6] text-sm text-center w-full py-2 px-2 rounded-sm inline-block">
               <Loader />
             </div>
           </div>
