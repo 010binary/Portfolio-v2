@@ -102,18 +102,30 @@ const Navbar = () => {
                 ))}
               </ul>
               <div className="mt-4 flex justify-between space-x-4 px-4">
-                <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+                <Link
+                  href="#"
+                  className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+                >
                   <Twitter size={15} />
-                </span>
-                <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+                </Link>
+                <Link
+                  href="#"
+                  className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+                >
                   <Linkedin size={15} />
-                </span>
-                <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+                </Link>
+                <Link
+                  href="#"
+                  className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+                >
                   <Github size={15} />
-                </span>
-                <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+                </Link>
+                <Link
+                  href="#"
+                  className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+                >
                   <PencilLine size={15} />
-                </span>
+                </Link>
               </div>
             </div>
           </>
@@ -154,18 +166,30 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="mt-auto flex justify-between space-x-4 p-2">
-            <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+            <Link
+              href="#"
+              className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+            >
               <Twitter size={15} />
-            </span>
-            <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+            </Link>
+            <Link
+              href="#"
+              className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+            >
               <Linkedin size={15} />
-            </span>
-            <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+            </Link>
+            <Link
+              href="#"
+              className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+            >
               <Github size={15} />
-            </span>
-            <span className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500">
+            </Link>
+            <Link
+              href="#"
+              className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+            >
               <PencilLine size={15} />
-            </span>
+            </Link>
           </div>
         </div>
       </nav>
