@@ -46,8 +46,8 @@ const Navbar = () => {
     { icon: CircleUserRound, label: "About", href: "/about" },
     { icon: ImageIcon, label: "Project", href: "/project" },
     { icon: Briefcase, label: "Tools & Stack", href: "/toolbox" },
-    { icon: Mail, label: "Contact Me", href: "#", highlight: true }, // dropdown
-    { icon: FileText, label: "My Resume", href: "#" }, //route to resume
+    { icon: Mail, label: "Contact Me", href: "#", highlight: true }, 
+    { icon: FileText, label: "My Resume", href: "#" }, 
   ];
 
   return (
@@ -61,7 +61,7 @@ const Navbar = () => {
               alt="Profile"
               className="w-12 h-12 rounded-md"
             />
-            <div className="bg-[#0d593953] ml-3 text-[#4ce6a6] font-semibold text-sm text-center py-2 px-2 rounded-sm inline-block">
+            <div className="bg-[#0d593953] ml-3 text-main font-semibold text-sm text-center py-2 px-2 rounded-sm inline-block">
               <Loader />
             </div>
           </div>
@@ -87,10 +87,10 @@ const Navbar = () => {
                       href={item.href}
                       className={`flex items-center text-sm space-x-4 py-3 px-4 ${
                         item.highlight
-                          ? "bg-[#4ce6a6] text-black font-semibold rounded-md duration-500 hover:bg-slate-400/50"
+                          ? "bg-main text-black font-semibold rounded-md duration-500 hover:bg-slate-400/50"
                           : item.label === "My Resume"
-                          ? "border border-gray-600 rounded-md font-light duration-500 hover:text-[#4ce6a6] hover:bg-slate-400/50"
-                          : "hover:bg-gray-800 hover:text-[#4ce6a6] hover:fill-[#4ce6a6] font-light text-gray-300 duration-500 rounded"
+                          ? "border border-gray-600 rounded-md font-light duration-500 hover:text-main hover:bg-slate-400/50"
+                          : "hover:bg-gray-800 hover:text-main hover:fill-main font-light text-gray-300 duration-500 rounded"
                       }
                       ${pathname === `${item.href}` ? "bg-slate-400/50" : ""}`}
                       onClick={handleCloseMenu} // Close menu on item click
@@ -104,25 +104,25 @@ const Navbar = () => {
               <div className="mt-4 flex justify-between space-x-4 px-4">
                 <Link
                   href="#"
-                  className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+                  className="hover:bg-main p-1 hover:scale-105 rounded-full hover:text-black duration-500"
                 >
                   <Twitter size={15} />
                 </Link>
                 <Link
                   href="#"
-                  className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+                  className="hover:bg-main p-1 hover:scale-105 rounded-full hover:text-black duration-500"
                 >
                   <Linkedin size={15} />
                 </Link>
                 <Link
                   href="#"
-                  className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+                  className="hover:bg-main p-1 hover:scale-105 rounded-full hover:text-black duration-500"
                 >
                   <Github size={15} />
                 </Link>
                 <Link
                   href="#"
-                  className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+                  className="hover:bg-main p-1 hover:scale-105 rounded-full hover:text-black duration-500"
                 >
                   <PencilLine size={15} />
                 </Link>
@@ -134,14 +134,14 @@ const Navbar = () => {
 
       {/* Desktop Sidebar */}
       <nav className="hidden md:flex flex-col text-white w-64 min-h-screen p-8 border-r border-r-slate-400/50">
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-screen">
           <div className="mb-4">
             <Image
               src={navimage}
               alt="Profile"
               className="rounded-sm h-48 mb-3 "
             />
-            <div className="bg-[#0d593953] text-[#4ce6a6] text-sm text-center w-full py-2 px-2 rounded-sm inline-block">
+            <div className="bg-[#0d593953] text-main text-sm text-center w-full py-2 px-2 rounded-sm inline-block">
               <Loader />
             </div>
           </div>
@@ -152,10 +152,10 @@ const Navbar = () => {
                   href={item.href}
                   className={`flex items-center text-sm font-light space-x-2 py-2 px-4 ${
                     item.highlight
-                      ? "bg-[#4ce6a6] text-black rounded-md hover:scale-105 duration-500"
+                      ? "bg-main text-black rounded-md hover:scale-105 duration-500"
                       : item.label === "My Resume"
-                      ? "border border-gray-600 rounded-md hover:scale-105 duration-500 hover:text-[#4ce6a6] hover:bg-slate-400/50"
-                      : "hover:bg-gray-800 hover:text-[#4ce6a6] hover:fill-[#4ce6a6] hover:scale-105 duration-500 rounded"
+                      ? "border border-gray-600 rounded-md hover:scale-105 duration-500 hover:text-main hover:bg-slate-400/50"
+                      : "hover:bg-gray-800 hover:text-main hover:fill-main hover:scale-105 duration-500 rounded"
                   } 
                   ${pathname === `${item.href}` ? "bg-slate-400/50" : ""}`}
                 >
@@ -168,27 +168,27 @@ const Navbar = () => {
           <div className="mt-auto flex justify-between space-x-4 p-2">
             <Link
               href="#"
-              className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+              className="hover:bg-main p-1 hover:scale-105 rounded-full hover:text-black duration-500"
             >
-              <Twitter size={15} />
+              <Twitter className="w-3 h-3" />
             </Link>
             <Link
               href="#"
-              className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+              className="hover:bg-main p-1 hover:scale-105 rounded-full hover:text-black duration-500"
             >
-              <Linkedin size={15} />
+              <Linkedin className="w-3 h-3" />
             </Link>
             <Link
               href="#"
-              className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+              className="hover:bg-main p-1 hover:scale-105 rounded-full hover:text-black duration-500"
             >
-              <Github size={15} />
+              <Github className="w-3 h-3" />
             </Link>
             <Link
               href="#"
-              className="hover:bg-[#4ce6a6] p-1 hover:scale-105 rounded-full hover:text-black duration-500"
+              className="hover:bg-main p-1 hover:scale-105 rounded-full hover:text-black duration-500"
             >
-              <PencilLine size={15} />
+              <PencilLine className="w-3 h-3" />
             </Link>
           </div>
         </div>

@@ -30,4 +30,20 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .custombtn:hover .icon {
+    transform: translate(10px);
+  }
+
+  .dot-separator {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0.5rem;
+  }
+
+  .dot-separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 3px dotted rgba(156, 163, 175, 0.577);
+  }
 }

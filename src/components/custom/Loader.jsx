@@ -3,8 +3,8 @@ import "./Loader.css";
 
 const Loader = () => {
   return (
-    <div class="container">
-      <span class="ball">Available for Work</span>
+    <div className="container">
+      <span className="ball">Available for Work</span>
     </div>
   );
 };
