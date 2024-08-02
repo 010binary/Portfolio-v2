@@ -37,7 +37,7 @@ Explore the different sections of the portfolio to learn more about me, my skill
 
 ## Contact
 
-- Email: [Augustine32fg@gmail.com](https://mailto:augustine32fg@gmail.com)
+- Contact Email: [Augustine32fg@gmail.com](https://mailto:augustine32fg@gmail.com)
 ---
 - LinkedIn: [Augustine](https://www.linkedin.com/in/alpha-augustine)
 ---
