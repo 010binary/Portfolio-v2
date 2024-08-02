@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
+import PropTypes from "prop-types";
 
 const Custombtn = ({ children, hasSvg, endpoint }) => {
   return (
@@ -20,6 +21,12 @@ const Custombtn = ({ children, hasSvg, endpoint }) => {
       </Link>
     </>
   );
+};
+
+Custombtn.propTypes = {
+  hasSvg: PropTypes.bool,
+  endpoint: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default Custombtn;
