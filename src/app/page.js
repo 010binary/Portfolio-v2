@@ -5,6 +5,7 @@ import FeaturedProject from "@/components/custom/FeaturedProject";
 import Hero from "@/components/custom/Hero";
 import PersonalProject from "@/components/custom/PersonalProject";
 import TestimonialsPage from "@/components/custom/TestimonialPage";
+import JobHistory from "@/components/custom/JobHistory";
 
 export default function Home() {
   return (
@@ -13,13 +14,12 @@ export default function Home() {
         <section>
           <Hero />
         </section>
-
         <section>
           <FeaturedProject />
         </section>
-        <div className="text-black font-extrabold w-full h-96 bg-white">
-          hello world
-        </div>
+        <section>
+          <JobHistory />
+        </section>
         <section>
           <PersonalProject />
         </section>

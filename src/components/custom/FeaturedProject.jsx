@@ -42,7 +42,7 @@ const projects = [
 function FeaturedProject() {
   return (
     <div className="mx-auto py-2">
-      <h1 className="text-3xl font-semibold mb-6">Feature Projects</h1>
+      <h1 className="text-3xl font-semibold mb-4">Feature Projects</h1>
       <ProjectGrid projects={projects} />
     </div>
   );

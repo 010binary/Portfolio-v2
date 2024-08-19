@@ -43,7 +43,7 @@ const projects = [
 function PersonalProject() {
   return (
     <div className="mx-auto py-2 space-y-6">
-      <h1 className="text-3xl font-semibold mb-8">Personal Projects</h1>
+      <h1 className="text-3xl font-semibold mb-4">Personal Projects</h1>
       <ProjectGrid projects={projects} />
       <section className="flex">
         {/* Flexible dot separator */}
