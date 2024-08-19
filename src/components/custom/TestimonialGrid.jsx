@@ -38,7 +38,7 @@ const TestimonialCard = ({ message, name, position, imageSrc, rating }) => {
 
 const TestimonialGrid = ({ testimonials }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className=" md:grid  md:grid-cols-2 lg:grid-cols-3 gap-6">
       {testimonials.map((testimonial, index) => (
         <TestimonialCard key={index} {...testimonial} />
       ))}

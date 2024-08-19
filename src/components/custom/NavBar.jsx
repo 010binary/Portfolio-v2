@@ -133,13 +133,13 @@ const Navbar = () => {
       </nav>
 
       {/* Desktop Sidebar */}
-      <nav className="hidden md:flex flex-col text-white w-64 min-h-screen p-8 border-r border-r-slate-400/50">
-        <div className="flex flex-col h-screen">
-          <div className="mb-4">
+      <nav className="hidden md:flex flex-col items-center justify-center max-h-screen sticky top-0 left-0 text-white w-64  p-8 border-r border-r-slate-400/50">
+        <div className="flex flex-col gap-2">
+          <div className="mb-4 space-y-1">
             <Image
               src={navimage}
               alt="Profile"
-              className="rounded-sm h-48 mb-3 "
+              className="rounded-sm h-48 mb-3"
             />
             <div className="bg-[#0d593953] text-main text-sm text-center w-full py-2 px-2 rounded-sm inline-block">
               <Loader />
@@ -165,7 +165,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="mt-auto flex justify-between space-x-4 p-2">
+          <div className="pt-8 flex justify-between space-x-4 p-2">
             <Link
               href="#"
               className="hover:bg-main p-1 hover:scale-105 rounded-full hover:text-black duration-500"

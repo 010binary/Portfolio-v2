@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className=" text-white py-8 px-2 md:px-10">
       <div className="container mx-auto flex justify-between items-center px-4">
         <span className="text-[10px] md:text-sm">
-          © Copyright 2023. All rights Reserved.
+          © Copyright 2024. All rights Reserved.
         </span>
         <div className="flex space-x-4">
           <Link

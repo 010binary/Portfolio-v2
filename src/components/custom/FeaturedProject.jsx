@@ -9,8 +9,7 @@ const projects = [
     date: "Sep 27, 2023",
     description:
       "A multipurpose school management system that bridges the gap in monitoring academic performances.",
-    imageUrl:
-      "https://res.cloudinary.com/de8rcwztx/image/upload/v1722083610/CarRental_yql3qf.jpg",
+    imageUrl: "Photos/hvnbhjjdpprrzzu4rrmt.webp",
     projectUrl: "/projects/smart-learner",
     imgRatio: 1.5,
   },
@@ -22,9 +21,8 @@ const projects = [
     date: "Sep 27, 2023",
     description:
       "A multipurpose school management system that bridges the gap in monitoring academic performances.",
-    imageUrl:
-      "https://res.cloudinary.com/de8rcwztx/image/upload/v1722083610/CarRental_yql3qf.jpg",
-    projectUrl: "/projects/smart-learner",
+    imageUrl: "Photos/u7nk3vtvhfszzsotikcw.webp",
+    projectUrl: "/projects/smart-learner", 
     imgRatio: 1.5,
   },
   {
@@ -35,8 +33,7 @@ const projects = [
     date: "Sep 27, 2023",
     description:
       "A multipurpose school management system that bridges the gap in monitoring academic performances.",
-    imageUrl:
-      "https://res.cloudinary.com/de8rcwztx/image/upload/v1722083610/CarRental_yql3qf.jpg",
+    imageUrl: "Photos/kscvvaoednkurc8uti7t.webp", 
     projectUrl: "/projects/smart-learner",
     imgRatio: 1.5,
   },
