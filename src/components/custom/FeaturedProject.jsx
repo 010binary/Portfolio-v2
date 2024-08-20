@@ -1,3 +1,4 @@
+import CustomTooltip from "./customtooltip";
 import ProjectGrid from "./ProjectCard";
 
 const projects = [
@@ -22,7 +23,7 @@ const projects = [
     description:
       "A multipurpose school management system that bridges the gap in monitoring academic performances.",
     imageUrl: "Photos/u7nk3vtvhfszzsotikcw.webp",
-    projectUrl: "/projects/smart-learner", 
+    projectUrl: "/projects/smart-learner",
     imgRatio: 1.5,
   },
   {
@@ -33,7 +34,7 @@ const projects = [
     date: "Sep 27, 2023",
     description:
       "A multipurpose school management system that bridges the gap in monitoring academic performances.",
-    imageUrl: "Photos/kscvvaoednkurc8uti7t.webp", 
+    imageUrl: "Photos/kscvvaoednkurc8uti7t.webp",
     projectUrl: "/projects/smart-learner",
     imgRatio: 1.5,
   },
@@ -42,7 +43,13 @@ const projects = [
 function FeaturedProject() {
   return (
     <div className="mx-auto py-2">
-      <h1 className="text-3xl font-semibold mb-4">Feature Projects</h1>
+      <section className=" flex items-center justify-between mb-4">
+        <h1 className="text-2xl md:text-3xl font-semibold">Feature Projects</h1>
+        <CustomTooltip
+          text="This are project that are for my Client /n
+        that i have worked with in the past"
+        />
+      </section>
       <ProjectGrid projects={projects} />
     </div>
   );

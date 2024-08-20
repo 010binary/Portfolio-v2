@@ -1,5 +1,6 @@
 import ProjectGrid from "./ProjectCard";
 import Custombtn from "./buttons/Custombtn";
+import CustomTooltip from "./customtooltip";
 
 const projects = [
   {
@@ -43,7 +44,14 @@ const projects = [
 function PersonalProject() {
   return (
     <div className="mx-auto py-2 space-y-6">
-      <h1 className="text-3xl font-semibold mb-4">Personal Projects</h1>
+      <section className=" flex items-center justify-between mb-4">
+        <h1 className="text-2xl md:text-3xl font-semibold">Personal Projects</h1>
+        <CustomTooltip
+          text="This are project that are for my Client /n
+        that i have worked with in the past"
+        />
+      </section>
+
       <ProjectGrid projects={projects} />
       <section className="flex">
         {/* Flexible dot separator */}

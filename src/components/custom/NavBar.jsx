@@ -133,7 +133,7 @@ const Navbar = () => {
       </nav>
 
       {/* Desktop Sidebar */}
-      <nav className="hidden md:flex flex-col items-center justify-center max-h-screen sticky top-0 left-0 text-white w-64  p-8 border-r border-r-slate-400/50">
+      <nav className="hidden md:flex flex-col items-center justify-center max-h-screen sticky top-0 left-0 text-white min-w-64 max-w-72  p-8 border-r border-r-slate-400/50">
         <div className="flex flex-col gap-2">
           <div className="mb-4 space-y-1">
             <Image

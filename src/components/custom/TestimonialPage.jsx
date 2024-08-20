@@ -30,8 +30,10 @@ const testimonials = [
 
 function TestimonialsPage() {
   return (
-    <div className="mx-auto py-8 bg-black">
-      <h2 className="text-3xl font-bold mb-6 text-white">Testimonials</h2>
+    <div className="mx-auto py-2 bg-black">
+      <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+        Testimonials
+      </h2>
       <TestimonialGrid testimonials={testimonials} />
     </div>
   );

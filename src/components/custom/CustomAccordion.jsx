@@ -8,7 +8,7 @@ import {
 const CustomAccordion = () => {
   return (
     <section>
-      <h1 className="text-3xl font-semibold mb-3">
+      <h1 className="text-2xl md:text-3xl font-semibold mb-4">
         Frequently asked questions
       </h1>
       <Accordion type="single" collapsible className="w-full">

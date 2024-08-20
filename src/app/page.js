@@ -10,7 +10,7 @@ import JobHistory from "@/components/custom/JobHistory";
 export default function Home() {
   return (
     <>
-      <main className="space-y-2 p-6 pt-5 md:px-14 md:pt-10 ">
+      <main className="space-y-2 p-6 pt-5 md:px-4 lg:px-8 xl:px-14 md:pt-10 ">
         <section>
           <Hero />
         </section>

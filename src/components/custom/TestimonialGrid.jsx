@@ -5,7 +5,7 @@ import { CldImage } from "next-cloudinary";
 
 const TestimonialCard = ({ message, name, position, imageSrc, rating }) => {
   return (
-    <div className="bg-mygray/10 p-8 rounded-lg min-h-96 flex flex-col justify-between ">
+    <div className="bg-mygray/10 p-8 rounded-lg min-h-96 md:min-w-80 max-w-96 min-w-72 flex flex-col justify-between ">
       <div className="flex mb-4">
         {[...Array(5)].map((_, index) => (
           <Star
@@ -38,7 +38,7 @@ const TestimonialCard = ({ message, name, position, imageSrc, rating }) => {
 
 const TestimonialGrid = ({ testimonials }) => {
   return (
-    <div className=" md:grid  md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="flex overflow-auto gap-2">
       {testimonials.map((testimonial, index) => (
         <TestimonialCard key={index} {...testimonial} />
       ))}
