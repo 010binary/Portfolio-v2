@@ -1,5 +1,6 @@
 import React from "react";
 import CustomTooltip from "./customtooltip";
+import JobTimeline from "./JobTimeline";
 
 const JobHistory = () => {
   return (
@@ -10,6 +11,9 @@ const JobHistory = () => {
           text="This are project that are for my Client /n
         that i have worked with in the past"
         />
+      </section>
+      <section>
+        <JobTimeline />
       </section>
     </>
   );
